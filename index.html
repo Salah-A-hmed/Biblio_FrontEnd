@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblio</title>
+    <link rel="stylesheet" href="CSS/Auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body class="bgImg">
+
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-black">
+        <div id="logoContainer" class="flex flex-col items-center">
+            <img src="img/logo.png" alt="Biblio Logo" class="w-32 h-32 mb-6 animate-pulse">
+            <h1 class="text-white text-5xl font-bold tracking-wider">Biblio</h1>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar position-absolute top-0 start-0 w-100" style="padding: 15px 4%; z-index: 1000;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center w-100">
+                <img src="img/logo.png" alt="Logo" width="60" height="60">
+                <a class="navbar-brand" href="#">
+                    <h1 class="mb-0 text-white">Biblio</h1>
+                </a>
+                <a href="Auth/signup.html" class="nav-buttons ms-auto">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="w-full">
+        <!-- Hero Section -->
+        <div class="relative bg-[url(img/pexels-polona-mitar-osolnik-899667-1837726.jpg)] bg-cover bg-center flex items-center justify-center text-white  overflow-hidden"
+            style="height: 735px;">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/60 z-[1]"></div>
+
+            <!-- Content Above Overlay -->
+            <div class="relative z-[2] text-center mx-4">
+                <h1 class="hero-title !text-4xl md:!text-7xl font-bold !mb-10">
+                    Welcome to Biblio<br> Library System
+                </h1>
+                <p class="hero-text !text-lg md:!text-xl !mb-10">
+                    Explore our comprehensive library<br> management tools tailored for your needs.
+                </p>
+                <a href="Auth/signup.html" class="hero-button nav-buttons">
+                    Get Started
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About Us Section -->
+    <div class="!py-20 !px-[6%] flex items-center md:!flex-row !flex-col !gap-30">
+        <!-- Image: Slow fade from left -->
+        <img src="img/About_US.jpg" alt="About Us Image"
+            class="w-[700px] !h-auto wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s"
+            data-wow-delay="0s" />
+
+        <div>
+            <!-- Heading: First element from right -->
+            <h3 class="!text-5xl !text-[#2C3E50] !font-bold !mb-10 wow animate__animated animate__fadeInRight"
+                data-wow-duration="1s" data-wow-delay="0.3s">
+                Who We Are
+            </h3>
+
+            <!-- Paragraph: Second element fades in -->
+            <p class="!text-[#34495E] !mb-8 max-w-2xl wow animate__animated animate__fadeInRight" data-wow-duration="1s"
+                data-wow-delay="0.6s">
+                At Biblio, we're dedicated to transforming the way libraries operate. Our mission is to provide a
+                seamless management system that simplifies everyday tasks. We believe in increasing efficiency while
+                enhancing user experiences. From streamlining inventory to improving community access, our values center
+                around innovation, integrity, and user support. Explore how we can support your librarys mission.
+            </p>
+
+            <!-- First feature box: Fades up -->
+            <div class="flex !gap-6 !mb-3 wow animate__animated animate__fadeInRight" data-wow-duration="0.8s"
+                data-wow-delay="0.9s">
+                <i class="fa-solid fa-star !mt-1.5" style="color: #4bc1d2;"></i>
+                <div>
+                    <h5 class="!text-[#34495E] !mb-2">Streamlined Management</h5>
+                    <p class="!text-[#34495E] max-w-2xl">Easily manage your collection with tools designed for
+                        simplicity
+                        and effectiveness.<br> Our system helps you keep track of resources effortlessly.</p>
+                </div>
+            </div>
+
+            <!-- Second feature box: Fades up -->
+            <div class="flex !gap-6 wow animate__animated animate__fadeInRight" data-wow-duration="0.8s"
+                data-wow-delay="1.2s">
+                <i class="fa-solid fa-star !mt-1.5" style="color: #4bc1d2;"></i>
+                <div>
+                    <h5 class="!text-[#34495E] !mb-2">User-Friendly Interface</h5>
+                    <p class="!text-[#34495E] max-w-xl">Navigate our platform with ease. We focus on a clean,
+                        straightforward design so your team can work without confusion or delays.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="!py-20 !px-[6%] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 !gap-8">
+
+        <!-- Card 1: Borrow Books -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="0.1s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">Borrow Books</h3>
+            <p class="!text-[#34495E] !mb-6 !leading-relaxed">
+                Easy access to a wide selection of books for all ages. Enjoy borrowing books with simple steps for your
+                reading pleasure.
+            </p>
+            <a href="pages/features.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                Learn More
+            </a>
+        </div>
+
+        <!-- Card 2: Book Returns -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="0.3s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">Book Returns</h3>
+            <p class="!text-[#34495E] !mb-6 !leading-relaxed">
+                Return books hassle-free with our quick drop-off system. We make it easy to keep your account in good
+                standing.
+            </p>
+            <a href="pages/features.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                Discover More
+            </a>
+        </div>
+
+        <!-- Card 3: Account Management -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="0.5s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">Account Management</h3>
+            <p class="!text-[#34495E] !mb-6 !leading-relaxed">
+                Manage your library account online. Update your information, check your borrowing history, and more.
+            </p>
+            <a href="Auth/signup.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                Get Started
+            </a>
+        </div>
+
+        <!-- Card 4: User Support -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="0.7s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">User Support</h3>
+            <p class="!text-[#34495E] !mb-12 !leading-relaxed">
+                Need help? Our support team is here to assist with any questions or issues you may have.
+            </p>
+            <a href="pages/contact.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                Contact Us
+            </a>
+        </div>
+
+        <!-- Card 5: Online Catalog -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="0.9s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">Online Catalog</h3>
+            <p class="!text-[#34495E] !mb-6 !leading-relaxed">
+                Explore our complete library catalog from anywhere. Find titles, check availability, and place holds
+                easily.
+            </p>
+            <a href="pages/catalog.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                View Catalog
+            </a>
+        </div>
+
+        <!-- Card 6: Community Events -->
+        <div class="!bg-[#E8EFF3] !rounded-xl !p-8 hover:!shadow-xl !transition-all !duration-300 wow animate__animated animate__fadeInUp"
+            data-wow-duration="0.8s" data-wow-delay="1.1s">
+            <i class="fa-solid fa-star !text-3xl !mb-4" style="color: #4bc1d2;"></i>
+            <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-4">Community Events</h3>
+            <p class="!text-[#34495E] !mb-6 !leading-relaxed">
+                Join us for exciting events and programs throughout the year. Engage with your community and broaden
+                your horizons.
+            </p>
+            <a href="pages/events.html"
+                class="!inline-block !px-6 !py-2.5 !border-2 !border-[#2C3E50] !text-[#2C3E50] !bg-transparent !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#2C3E50] hover:!text-white !no-underline">
+                See Events
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Discover Section -->
+    <div class="!py-25 !px-[6%] flex items-center md:!flex-row !flex-col !gap-16">
+
+        <!-- Left Content -->
+        <div class="md:!w-1/2 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+            <h2 class="!text-5xl !font-bold !text-[#2C3E50] !mb-6 !leading-tight">
+                Discover Essential<br> Features of Biblio
+            </h2>
+            <p class="!text-[#34495E] !mb-8 !text-lg !leading-relaxed max-w-xl">
+                Want to enhance your library experience? Biblio offers intuitive features designed just for you. Check
+                out our features that bring your data to life, a simple contact form to reach out, and a user-friendly
+                search bar to find exactly what you need.
+            </p>
+            <a href="pages/features.html"
+                class="!inline-block !px-8 !py-3 !bg-[#4bc1d2] !text-white !rounded-lg !font-semibold !transition-all !duration-300 hover:!bg-[#0096b5] hover:!shadow-lg !no-underline">
+                Learn More
+            </a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="md:!w-1/2  wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+            <img src="img/discover.png" alt="Biblio Features Dashboard"
+                class="!w-full h-auto md:!h-[500px] !rounded-2xl !shadow-2xl">
+        </div>
+
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="!py-10 !px-[6%]">
+        <div class="!text-center !mb-16 wow animate__animated animate__fadeIn" data-wow-duration="1s">
+            <p class="!text-[#34495E] !font-semibold !mb-8 !text-lg">Your Trusted Resource</p>
+            <h2 class="!text-5xl !font-bold !text-[#2C3E50]">What Our Users Say</h2>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper testimonialSwiper !max-w-4xl !mx-auto wow animate__animated animate__fadeInUp !mb-6"
+            data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="swiper-wrapper">
+
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide">
+                    <div class="!bg-white !rounded-2xl !p-12 !shadow-lg !text-center">
+                        <div class="!mb-8">
+                            <i class="fas fa-quote-left !text-4xl !text-[#34495E] !opacity-30"></i>
+                        </div>
+                        <p class="!text-[#34495E] !text-lg !mb-8 !leading-relaxed !italic">
+                            "This library management system has transformed the way we operate. Its efficient and
+                            user-friendly. I can't imagine going back to the old way!"
+                        </p>
+                        <h4 class="!text-xl !font-bold !text-[#2C3E50] !mb-1">Alice Johnson</h4>
+                        <p class="!text-[#34495E] !font-medium">City Library</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide">
+                    <div class="!bg-white !rounded-2xl !p-12 !shadow-lg !text-center">
+                        <div class="!mb-8">
+                            <i class="fas fa-quote-left !text-4xl !text-[#34495E] !opacity-30"></i>
+                        </div>
+                        <p class="!text-[#34495E] !text-lg !mb-8 !leading-relaxed !italic">
+                            "Biblio has streamlined our entire workflow. The intuitive interface makes it easy for our
+                            staff to manage thousands of books effortlessly. Highly recommended!"
+                        </p>
+                        <h4 class="!text-xl !font-bold !text-[#2C3E50] !mb-1">Michael Chen</h4>
+                        <p class="!text-[#34495E] !font-medium">University Library</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide">
+                    <div class="!bg-white !rounded-2xl !p-12 !shadow-lg !text-center">
+                        <div class="!mb-8">
+                            <i class="fas fa-quote-left !text-4xl !text-[#34495E] !opacity-30"></i>
+                        </div>
+                        <p class="!text-[#34495E] !text-lg !mb-8 !leading-relaxed !italic">
+                            "As a librarian, I appreciate how Biblio simplifies book tracking and patron management.
+                            It's made my job so much easier and our patrons love it too!"
+                        </p>
+                        <h4 class="!text-xl !font-bold !text-[#2C3E50] !mb-1">Sarah Martinez</h4>
+                        <p class="!text-[#34495E] !font-medium">Community Library</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="swiper-pagination !mt-8"></div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="!py-20 !px-[6%] !bg-[#3d5a73] wow animate__animated animate__fadeIn" data-wow-duration="1s">
+        <div class="!text-center !max-w-5xl !mx-auto">
+            <h2 class="!text-white !text-4xl md:!text-5xl !font-bold !mb-6 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s" data-wow-delay="0.2s">
+                Ready to elevate your library experience?
+            </h2>
+            <p class="!text-white !text-lg !mb-10 !leading-relaxed !opacity-90 wow animate__animated animate__fadeInUp"
+                data-wow-duration="1s" data-wow-delay="0.4s">
+                Transform the way you manage your library. Discover features that simplify tasks, enhance user
+                interactions, and streamline operations. Join us on this journey to better library management. Get
+                started today and experience the difference!
+            </p>
+            <a href="Auth/signup.html"
+                class="!inline-block !px-10 !py-4 !bg-[#4bc1d2] !text-white !rounded-lg !font-semibold !text-lg !transition-all !duration-300 hover:!bg-[#0096b5] hover:!shadow-2xl hover:!scale-105 wow animate__animated animate__fadeInUp !no-underline"
+                data-wow-duration="1s" data-wow-delay="0.6s">
+                Get Demo
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="!py-10 !px-[6%] !bg-[#E8EFF3] !border-t !border-gray-300">
+        <div class="flex flex-col md:flex-row items-center justify-between !gap-6">
+
+            <!-- Logo and Brand -->
+            <div class="flex items-center !gap-3">
+                <img src="img/logo.png" alt="Biblio Logo" class="!w-12 !h-12">
+                <h3 class="!text-2xl !font-bold !text-[#2C3E50] !mb-0">Biblio</h3>
+            </div>
+
+            <!-- Copyright -->
+            <div class="!text-center">
+                <p class="!text-[#34495E] !mb-0">© 2025 Biblio. All rights reserved.</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex items-center !gap-4">
+                <a href="#" class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300"
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook !text-2xl"></i>
+                </a>
+                <a href="#" class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300"
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter !text-2xl"></i>
+                </a>
+                <a href="#" class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram !text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Bottom Links -->
+        <div
+            class="!mt-6 !pt-6 !border-t !border-gray-300 flex flex-col md:flex-row items-center justify-center !gap-6">
+            <a href="pages/data-protection.html"
+                class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300 !no-underline">Data
+                Protection</a>
+            <span class="!text-gray-400 hidden md:inline">|</span>
+            <a href="pages/user-agreement.html"
+                class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300 !no-underline">User
+                Agreement</a>
+            <span class="!text-gray-400 hidden md:inline">|</span>
+            <a href="pages/cookie-preferences.html"
+                class="!text-[#34495E] hover:!text-[#4bc1d2] !transition-colors !duration-300 !no-underline">Cookie
+                Preferences</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="JS/Script.js"></script>
+</body>
+
+</html>
